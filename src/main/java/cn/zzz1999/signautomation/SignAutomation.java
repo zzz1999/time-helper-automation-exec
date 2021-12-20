@@ -109,7 +109,7 @@ public class SignAutomation {
         } finally {
             if (!successFlag) {
                 if (errorCounter.get() < ERROR_TERMINATION_TIME) {
-                    int minuteOffset = randInt(50, 235);
+                    int minuteOffset = randInt(5, 31);
                     System.out.println("打卡状态异常,将在下次重试打卡时间(" + LocalDateTime.now().plusMinutes(minuteOffset).format(DATE_TIME_FORMATTER) + ")再次打卡");
                     try {
                         TimeUnit.MINUTES.sleep(minuteOffset);
@@ -133,7 +133,21 @@ public class SignAutomation {
         return ThreadLocalRandom.current().nextInt(origin, bound);
     }
 
+    /**
+     * 获取明天的打卡时间
+     *
+     * @return 下次打卡时间
+     */
     public static LocalDateTime getNextSignDate() {
         return nextSignDate;
+    }
+
+    /**
+     * 获取打卡失败累计次数
+     *
+     * @return 打卡失败累计次数
+     */
+    public static AtomicInteger getErrorCounter() {
+        return errorCounter;
     }
 }
