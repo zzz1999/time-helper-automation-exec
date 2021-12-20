@@ -30,5 +30,5 @@
     public static AtomicInteger getErrorCounter()
 ```
 ### 日志演示
-![错误日志演示](https://github.com/zzz1999/time-helper-automation-exec/blob/master/src/main/resources/log_list.png?raw=true)
-![错误日志内容](https://github.com/zzz1999/time-helper-automation-exec/blob/master/src/main/resources/log_content.png?raw=true)
+![错误日志演示](https://github.com/zzz1999/time-helper-automation-exec/blob/master/src/main/resources/log_list.png)
+![错误日志内容](https://github.com/zzz1999/time-helper-automation-exec/blob/master/src/main/resources/log_content.png)
